@@ -649,6 +649,51 @@ def getColor(pt,image_hsv):
     print h,s,v
     return color
 
+def getMaskColor(pt,im_hsv):
+    W_mask = cv.inRange(im_hsv,W_lower,W_upper)
+    R_mask = cv.inRange(im_hsv,R_lower,R_upper)
+    Y_mask = cv.inRange(im_hsv,Y_lower,Y_upper)
+    O_mask = cv.inRange(im_hsv,O_lower,O_upper)
+    B_mask = cv.inRange(im_hsv,B_lower,B_upper)
+    G_mask = cv.inRange(im_hsv,G_lower,G_upper)
+    W_list = []
+    R_list = []
+    Y_list = []
+    O_list = []
+    B_list = []
+    G_list = []
+    r = 5
+    for x in xrange(-r,r):
+        for y in xrange(-r,r):
+            pt = (pt[0]+x,pt[1]+y)
+            if W_mask[pt] == 255:
+                W_list.append('white')
+            elif R_mask[pt] == 255:
+                R_list.append('red')
+            elif Y_mask[pt] == 255:
+                Y_list.append('yellow')
+            elif O_mask[pt] == 255:
+                O_list.append('orange')
+            elif B_mask[pt] == 255:
+                B_list.append('blue')
+            elif G_mask[pt] == 255:
+                G_list.append('green')
+    W,R,Y,O,B,G = len(W_list),len(R_list),len(Y_list),len(O_list),len(B_list),len(G_list)
+    print W,R,Y,O,B,G
+    res = np.argmax((W,R,Y,O,B,G))
+    if res == 0:
+        return 'White'
+    if res == 1:
+        return 'Red'
+    if res == 2:
+        return 'Yellow'
+    if res == 3:
+        return 'Orange'
+    if res == 4:
+        return 'Blue'
+    if res == 5:
+        return 'Green'
+
 image = getImage('Black',2947,False)
 #frame = getFrame(1,100)
 if init_:
@@ -661,7 +706,7 @@ pts = getCenters(corners)
 center_pt = pts[1]
 color_list1 = []
 for pt in pts:
-    color = getColor(pt,image.image_hsv)
+    color = getMaskColor(pt,image.image_hsv)
     color_list1.append(color)
 print color_list1
 subplot,im = getSubplot(edges,im,dist_avg)
