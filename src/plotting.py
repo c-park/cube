@@ -5,9 +5,106 @@ import numpy as np
 from random import seed,randint
 import cv2 as cv
 import matplotlib.patches as patches
+import trackCube_v3
 
 #W_face_data = np.array([[1.0,1.0,1.0],[1.0,1.0,1.0],[1.0,1.0,1.0]])
 
+def plotCube(face_list):
+    face_colors = []
+    for face in face_list:
+        face_colors.append((face.colors, face.rotation))
+    cube_layout = plt.figure()
+    cube_layout.canvas.set_window_title('Cube State')
+    W_face = cube_layout.add_subplot(345, aspect='equal')
+    R_face = cube_layout.add_subplot(346, aspect='equal')
+    Y_face = cube_layout.add_subplot(347, aspect='equal')
+    O_face = cube_layout.add_subplot(348, aspect='equal')
+    B_face = cube_layout.add_subplot(341, aspect='equal')
+    G_face = cube_layout.add_subplot(349, aspect='equal')
+    ax_faces = [W_face,R_face,Y_face,O_face,B_face,G_face]
+    for face in face_colors:
+        f_colors,f_rot = face[0],face[1]
+        for p in [
+            patches.Rectangle(
+                (0, 0), .333, .333,
+                facecolor=f_colors[2,0]
+            ),
+            patches.Rectangle(
+                (.333, 0), .333, .333,
+                facecolor=f_colors[2,1]
+            ),
+            patches.Rectangle(
+                (.666, 0), .333, .333,
+                facecolor=f_colors[2,2]
+            ),
+            patches.Rectangle(
+                (0, .333), .333, .333,
+                facecolor=f_colors[1,0]
+            ),
+            patches.Rectangle(
+                (.333, .333), .333, .333,
+                facecolor=f_colors[1,1]
+            ),
+            patches.Rectangle(
+                (.666, .333), .333, .3331,
+                facecolor=f_colors[1,2]
+            ),
+            patches.Rectangle(
+                (0, .666), .333, .333,
+                facecolor=f_colors[0,0]
+            ),
+            patches.Rectangle(
+                (.333, .666), .333, .333,
+                facecolor=f_colors[0,1]
+            ),
+            patches.Rectangle(
+                (.666, .666), .333, .333,
+                facecolor=f_colors[0,2]
+            ),
+        ]:
+            if f_colors[1,1] == 'white':
+                W_face.add_patch(p)
+            if f_colors[1,1] == 'red':
+                R_face.add_patch(p)
+            if f_colors[1,1] == 'yellow':
+                Y_face.add_patch(p)
+            if f_colors[1,1] == 'orange':
+                O_face.add_patch(p)
+            if f_colors[1,1] == 'blue':
+                B_face.add_patch(p)
+            if f_colors[1,1] == 'green':
+                G_face.add_patch(p)
+    for ax in ax_faces:
+        for loc in [0, 0.33, 0.66, 1]:
+            ax.axvline(x=loc, color='k')
+            ax.axhline(y=loc, color='k')
+        ax.tick_params(top='off', bottom='off', left='off', right='off', labelleft='off', labelbottom='off')
+
+    plt.show()
+
+W_face = trackCube_v3.Face('white')
+R_face = trackCube_v3.Face('red')
+Y_face = trackCube_v3.Face('yellow')
+O_face = trackCube_v3.Face('orange')
+B_face = trackCube_v3.Face('blue')
+G_face = trackCube_v3.Face('green')
+print W_face.colors[1,2]
+W_face.colors[1,2] = 'red'
+print W_face.colors[1,2]
+print R_face.colors[1,2]
+R_face.colors[1,2] = 'white'
+print R_face.colors[1,2]
+face_list = [W_face,R_face,Y_face,O_face,B_face,G_face]
+plotCube(face_list)
+
+
+def plotCubeV2(face_list):
+    pass
+
+
+
+
+'''
 cube_layout = plt.figure()
 W_face = cube_layout.add_subplot(345,aspect='equal')
 R_face = cube_layout.add_subplot(346,aspect='equal')
@@ -55,7 +152,7 @@ for p in[
 ]:
     W_face.add_patch(p)
 plt.show()
-
+'''
 '''
 img = np.ones((512,512,3),np.uint8)
 cv.rectangle(img,(0,0),(200,200),(0,255,0),3)

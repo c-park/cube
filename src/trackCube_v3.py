@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import math
 
 debug_ = True
-show_ = True
+show_ = False
 init_ = False
 g_ = 10 # Gaussian Blur Level
 NNT_ = 10 # Nearest neighbor threshold
@@ -37,7 +37,7 @@ class Frame:
 
 class Face:
     def __init__(self,color):
-        self.colors = np.array([[color,color,color],[color,color,color],[color,color,color]])
+        self.colors = np.array([[color,color,color],[color,color,color],[color,color,color]],dtype=object)
         self.rotation = 0 # Can be 0, 90, 180, or 270
         self.corners = []
         self.edges = []
@@ -158,6 +158,7 @@ def getThresholds(image):
 
     while(1):
         cv.imshow('Original Image',image.image)
+        #cv.imshow('HSV Image',image.image_hsv)
         k = cv.waitKey(1) & 0xFF
         if k == 27:
             break
@@ -202,7 +203,7 @@ def getThresholds(image):
 
         #apply the range on a mask
         mask = cv.inRange(image.image_hsv,HSVLOW, HSVHIGH)
-        res = cv.bitwise_and(image.image,image.image, mask =mask)
+        res = cv.bitwise_and(image.image_hsv,image.image_hsv, mask =mask)
         cv.imshow('Current Mask',res)
     cv.destroyAllWindows()
     if debug_:
@@ -647,6 +648,7 @@ def getColor(pt,image_hsv):
                 color = 'green'
 
     print h,s,v
+    print color
     return color
 
 def getMaskColor(pt,im_hsv):
@@ -694,7 +696,8 @@ def getMaskColor(pt,im_hsv):
     if res == 5:
         return 'Green'
 
-image = getImage('Black',2947,False)
+image = getImage('Black',2948,False)
+#image = getImage('Black',2958,True)
 #frame = getFrame(1,100)
 if init_:
     getThresholds(image)
@@ -710,3 +713,15 @@ for pt in pts:
     color_list1.append(color)
 print color_list1
 subplot,im = getSubplot(edges,im,dist_avg)
+for pt in pts:
+    G_mask = mask_list[5]
+    value_sum = 0
+    count = 0
+    for i in range(-25,25,1):
+        for j in range(-25,25,1):
+            value = G_mask[(pt[0]+i,pt[1]+j)]
+            value_sum += value
+            count += 1
+    value_avg = value_sum / count
+    print 'value_avg',value_avg
+    color = getColor(pt,image.image_hsv)
