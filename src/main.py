@@ -55,12 +55,12 @@ def main():
     hsvImg = cv2.cvtColor(img1, cv2.COLOR_BGR2HSV)
 
     for i,c in enumerate(centroids):
-        print('\nCube Face: {}'.format(i))
+        # print('\nCube Face: {}'.format(i))
         # print('Centroid location: {}'.format(c))
         color = avgColor(hsvImg, c, boxHeight, boxWidth)
         # pixel = hsvImg[c]
         # color = getColor(pixel)
-        print('color: {}'.format(color))
+        # print('color: {}'.format(color))
 
 
 def cube():
@@ -113,7 +113,9 @@ def cube():
 
         name = os.path.splitext(fname)[0]
         title = 'results_' + name
-        plotCube(rgbImg, colors, title)
+        # plotCube(rgbImg, colors, title)
+
+    plotCubes(face_colors, 'state_1_all_faces_v1')
 
     # Pass face_colors to plotting function plotCube()
 

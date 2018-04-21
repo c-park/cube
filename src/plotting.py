@@ -70,7 +70,7 @@ def plotCube(rgbImg, f_colors, title):
     plt.savefig(title)
     plt.show()
 
-def plotCubes(face_colors):
+def plotCubes(face_colors, title):
     """
         face_colors = [[TL,ML,BL,TC,MC,BC,TR,MR,BR], ... , ]
     """
@@ -91,7 +91,7 @@ def plotCubes(face_colors):
         patch_list = [patches.Rectangle((0, .666), .333, .333,facecolor=f_colors[0]),    # TL
                       patches.Rectangle((0, .333), .333, .333,facecolor=f_colors[1]),    # ML
                       patches.Rectangle((0, 0), .333, .333,facecolor=f_colors[2]),       # BL
-                      patches.Rectangle((.333 ,666), .333, .333,facecolor=f_colors[3]), # TC
+                      patches.Rectangle((.333 ,.666), .333, .333,facecolor=f_colors[3]), # TC
                       patches.Rectangle((.333, .333), .333, .333,facecolor=f_colors[4]), # MC
                       patches.Rectangle((.333, 0), .333, .333,facecolor=f_colors[5]),    # BC
                       patches.Rectangle((.666, .666), .333, .333,facecolor=f_colors[6]), # TR
@@ -117,6 +117,7 @@ def plotCubes(face_colors):
             ax.axhline(y=loc, color='k')
         ax.tick_params(top='off', bottom='off', left='off', right='off', labelleft='off', labelbottom='off')
 
+    plt.savefig(title)
     plt.show()
 
 

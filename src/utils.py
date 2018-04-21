@@ -19,7 +19,7 @@ def centeroid(arr):
     sum_y = np.sum(arr[:, 1])
     return sum_x/length, sum_y/length
 
-def displayCentroids(img, centroids, bounds):
+def displayCentroids(img, centroids, bounds, f):
     plt.figure(figsize=(4,4))
 
     plt.imshow(img, 'gray')
@@ -33,9 +33,10 @@ def displayCentroids(img, centroids, bounds):
     plt.title('Centroids of Cube Stickers')
     plt.xticks([]), plt.yticks([])
 
+    plt.savefig('results/step' + f)
     plt.show()
 
-def display(img, title='', contours=None, cmap='gray'):
+def display(img, title='', contours=None, cmap='gray', f='1'):
     """TODO: Docstring for displat.
 
     :img: TODO
@@ -57,6 +58,7 @@ def display(img, title='', contours=None, cmap='gray'):
     plt.xticks([]), plt.yticks([])
     plt.title(title)
 
+    plt.savefig('results/step' + f)
     plt.show()
 
 

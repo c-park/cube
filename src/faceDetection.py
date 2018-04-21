@@ -175,17 +175,17 @@ def recognizeCube(img, **kwargs):
     # Display all steps
     if _DEBUG:
         pass
-        # display(rgbImg, title='Original')
-        # display(grayImg, title='Grayscale')
-        # display(bcImg, title='Brightness and Contrast Adjusted')
-        # display(gaussImg, title='Gaussian Blur')
-        # display(lapImg, title='Laplacian Operator')
-        # display(dilateImg, title='First Dilation')
-        # display(thImg, title='Thresholded image')
-        # display(dilateImg2, title='Second Dilation')
-        # display(rgbImg, title='Contours', contours=_contours)
-        # display(rgbImg, title='Filtered Contours', contours=contours)
-        # displayCentroids(rgbImg, centroids, bounds)
+        # display(rgbImg, title='Original', f='1')
+        # display(grayImg, title='Grayscale', f='2')
+        # display(bcImg, title='Brightness and Contrast Adjusted', f='3')
+        # display(gaussImg, title='Gaussian Blur', f='4')
+        # display(lapImg, title='Laplacian Operator', f='5')
+        # display(dilateImg, title='First Dilation', f='6')
+        # display(thImg, title='Thresholded image', f='7')
+        # display(dilateImg2, title='Second Dilation', f='8')
+        # display(rgbImg, title='Contours', contours=_contours, f='9')
+        # display(rgbImg, title='Filtered Contours', contours=contours, f='10')
+        # displayCentroids(rgbImg, centroids, bounds, f='11')
 
     return sorted_centroids, boxHeight, boxWidth
 
@@ -208,8 +208,6 @@ def main():
 
     }
 
-
-
     # Read Test Images into memory
 
     # img1 = cv2.imread(test_path + 'IMG_2935.JPG')
@@ -226,7 +224,7 @@ def main():
 
 
 
-    img = cv2.imread('state_1/IMG_3049.JPG')
+    img = cv2.imread('state_1/IMG_3045.JPG')
     recognizeCube(img, **kwargs)
 
 

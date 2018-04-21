@@ -123,6 +123,9 @@ def avgColor(img, c, boxHeight, boxWidth):
 
     color = max(cDict, key=cDict.get)
 
+    if all(value == 0 for value in cDict.values()):
+        color = 'white'
+
 
     # colorsDict = dict()
     # for i in range(minX, maxX):
@@ -130,20 +133,19 @@ def avgColor(img, c, boxHeight, boxWidth):
     #         color = getColor(img[i,j])
     #         colorsDict[color] = 0
 
-    # hsvs = []
-    # for i in range(minX, maxX):
-    #     for j in range(minY, maxY):
-    #         hsvs.append(img[i,j])
-    #         color = getColor(img[i,j])
-    #         colorsDict[color] += 1
+    hsvs = []
+    for i in range(minX, maxX):
+        for j in range(minY, maxY):
+            hsvs.append(img[i,j])
 
-    # avgHsv = np.mean(hsvs, axis=0)
+    avgHsv = np.mean(hsvs, axis=0)
     # color = max(colorsDict, key=colorsDict.get)
 
     # h = np.mean(hues)
-    # print('Colors Dict: {}'.format(colorsDict))
+    # print('Colors Dict: {}'.format(cDict))
     # print('Centroid Hue: {}'.format(img[c]))
-    # print('Average Hue: {}'.format(avgHsv))
+    # print('Average HSV: {}'.format(avgHsv))
+    # print('Color: {}'.format(color))
     # print('Average Hue: {}'.format(h))
 
     return color
@@ -184,7 +186,7 @@ def main():
 
     face_colors = []
 
-    img = cv2.imread('state_1/IMG_3045.JPG')
+    img = cv2.imread('state_1/IMG_3050.JPG')
     rgbImg = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     hsvImg = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
@@ -194,7 +196,7 @@ def main():
     colors = []
     centroidDict = {}
     for i,c in enumerate(centroids):
-        # print('\nCube Face: {}'.format(i))
+        print('\nCube Face: {}'.format(i))
         # print('Centroid location: {}'.format(c))
         color = avgColor(hsvImg, c, boxHeight, boxWidth)
         centroidDict[c] = color
