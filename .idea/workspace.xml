@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="884b0160-1b00-4643-8390-9d91f5391b56" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Cube.iml" afterPath="$PROJECT_DIR$/.idea/Cube.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WadsworthParkison_Update.ppt" afterPath="$PROJECT_DIR$/WadsworthParkison_Update.ppt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/plotting.py" afterPath="$PROJECT_DIR$/src/plotting.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trackCube_v3.py" afterPath="$PROJECT_DIR$/src/trackCube_v3.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trackCube_v3.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="trackCube_v3.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/trackCube_v3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11798">
-              <caret line="699" column="1" lean-forward="false" selection-start-line="699" selection-start-column="1" selection-end-line="699" selection-end-column="1" />
+            <state relative-caret-position="459">
+              <caret line="87" column="16" lean-forward="true" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -75,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plotting.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plotting.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/plotting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="681">
-              <caret line="62" column="14" lean-forward="true" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
+            <state relative-caret-position="579">
+              <caret line="57" column="39" lean-forward="true" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -117,9 +115,9 @@
         <option value="$PROJECT_DIR$/src/trackCube.py" />
         <option value="$PROJECT_DIR$/src/trackCube_v2.py" />
         <option value="$PROJECT_DIR$/src/threshold_slider.py" />
-        <option value="$PROJECT_DIR$/src/trackCube_v3.py" />
         <option value="$PROJECT_DIR$/src/test.py" />
         <option value="$PROJECT_DIR$/src/plotting.py" />
+        <option value="$PROJECT_DIR$/src/trackCube_v3.py" />
       </list>
     </option>
   </component>
@@ -169,15 +167,7 @@
               <item name="Cube" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="CubePictures" type="462c0819:PsiDirectoryNode" />
-              <item name="Black Background" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cube" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="CubePictures" type="462c0819:PsiDirectoryNode" />
-              <item name="Black Background" type="462c0819:PsiDirectoryNode" />
-              <item name="Mixed" type="462c0819:PsiDirectoryNode" />
+              <item name="State 1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cube" type="b2602c69:ProjectViewProjectNode" />
@@ -188,12 +178,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignment 5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -208,7 +198,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.plotting">
+  <component name="RunManager" selected="Python.trackCube_v3">
     <configuration name="plotting" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -303,9 +293,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.plotting" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.trackCube_v3" />
+        <item index="0" class="java.lang.String" itemvalue="Python.trackCube_v3" />
+        <item index="1" class="java.lang.String" itemvalue="Python.plotting" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
         <item index="3" class="java.lang.String" itemvalue="Python.trackCube_v2" />
         <item index="4" class="java.lang.String" itemvalue="Python.threshold_slider" />
       </list>
@@ -328,13 +318,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.146875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26631853" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26560846" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -687,16 +677,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/trackCube_v3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11798">
-          <caret line="699" column="1" lean-forward="false" selection-start-line="699" selection-start-column="1" selection-end-line="699" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -707,9 +687,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/plotting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="62" column="14" lean-forward="true" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
+        <state relative-caret-position="579">
+          <caret line="57" column="39" lean-forward="true" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trackCube_v3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="87" column="16" lean-forward="true" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

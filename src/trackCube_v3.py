@@ -14,12 +14,20 @@ KT_ = 30 # Nearest keypoint threshold
 MMT_ = 10 # Min/Max Threshold
 
 color_list = ['White','Red','Yellow','Orange','Blue','Green']
-W_lower,W_upper = np.array([0,0,196]), np.array([179,21,255])
+'''lower,W_upper = np.array([0,0,196]), np.array([179,21,255])
 R_lower,R_upper = np.array([0,203,204]), np.array([179,222,255])
 Y_lower,Y_upper = np.array([23,137,199]), np.array([39,198,255])
 O_lower,O_upper = np.array([7,188,188]), np.array([37,255,255])
 B_lower,B_upper = np.array([94,229,167]), np.array([127,255,213])
 G_lower,G_upper = np.array([62,29,131]), np.array([73,255,210])
+'''
+
+W_lower,W_upper = np.array([0,0,245]), np.array([6,23,255])
+R_lower,R_upper = np.array([0,137,108]), np.array([6,255,255])
+Y_lower,Y_upper = np.array([26,137,108]), np.array([42,255,255])
+O_lower,O_upper = np.array([11,136,118]), np.array([21,255,255])
+B_lower,B_upper = np.array([106,145,101]), np.array([114,255,255])
+G_lower,G_upper = np.array([39,114,96]), np.array([98,255,255])
 
 
 class Frame:
@@ -69,6 +77,7 @@ def getImage(back_col,im_num,solid):
     im_file = os.getcwd() + im_file
     if debug_:
         print 'Image File Location: ',im_file
+    im_file = os.getcwd() + '\\data\\CubePictures\\State 1\\IMG_3048.JPG'
     im_test = cv.imread(im_file)
     im_test = cv.resize(im_test, (0,0), fx=0.25, fy=0.25)
     if show_:
